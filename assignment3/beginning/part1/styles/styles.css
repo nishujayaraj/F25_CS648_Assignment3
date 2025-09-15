@@ -1,69 +1,83 @@
-/* ===============================
-   Assignment 3 - Part 1 (style.css)
-   =============================== */
-
-/* Task 2: Type selector for body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  line-height: 2em;
-  background-color: #EDEDED;
+/* task 2  */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 2em;
+    background-color: #EDEDED;
 }
 
-/* Task 3: All headings (h1–h6) */
-h1, h2, h3, h4, h5, h6 {
-  color: #929CA4;
-  border-bottom: 1px solid #929CA4;
+
+/* task 3  */
+.heading {
+    color: red;
+    border: 1px solid #939CA4;
 }
 
-/* Task 4: First letter of the first paragraph */
+
+/* task 4  */
 p:first-of-type::first-letter {
-  font-size: 30px;
+    font-size: 30px;
 }
 
-/* Task 5: Class for solution titles */
+
+/* task 5 */
 .solution {
-  color: #CC1C0D;
-  font-weight: bold;
+    color: #CC1C0D;
+    font-weight: bold;
 }
 
-/* Task 6: Testimonials by ID */
+
+/* task 6  */
 #testimonial1,
 #testimonial2 {
-  font-style: italic;
-  margin-left: 50px;   /* indent */
+    font-style: italic;
+    margin: 50px;
 }
 
-/* Task 7: External links (http) in different states */
+
+/* task 7  */
+a[href^="http"] {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Unvisited state */
 a[href^="http"]:link {
-  color: #CC1C0D;          
-  text-decoration: none;
+    color: blue;
+    text-decoration: underline;
 }
+
+/* Visited state */
 a[href^="http"]:visited {
-  color: #685288;          /* purple */
-  text-decoration: none;
+    color: purple;
+    text-decoration: none;
 }
+
+/* Hover state */
 a[href^="http"]:hover {
-  color: #37A4A4;          /* teal */
-  text-decoration: underline;
+    color: green;
+    text-decoration: underline;
 }
+
+/* Active state */
 a[href^="http"]:active {
-  color: #000000;          /* black */
-  text-decoration: underline;
+    color: red;
+    text-decoration: none;
 }
 
-/* Task 8: Remove bullets from Management Team list */
-#management ul {
-  list-style: none;
-  padding-left: 0;
+
+/* task 8  */
+.list-items li {
+    list-style: none;
 }
 
-/* Task 9: First item blue */
-#management li:first-child {
-  color: blue;
+
+/* task 9  */
+.list-items li:first-child {
+    color: blue;
 }
 
-/* Task 10: Last item red */
-#management li:last-child {
-  color: red;
+/* task 10 */
+.list-items li:last-child {
+    color: red;
 }
